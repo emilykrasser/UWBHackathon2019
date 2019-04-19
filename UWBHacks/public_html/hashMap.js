@@ -10,6 +10,8 @@ function hashMap(){
     this.theresaMay = [];
     this.pokemon = [];
     this.frogs = [];
+    this.animals=[];
+    this.dogs = [];
     this.spiderman.push("memes/tearymaguire.jpg");
     this.brain.push("memes/waterExpandingBrain.jpg");
     this.brain.push("memes/whomst.jpg");
@@ -25,6 +27,7 @@ function hashMap(){
     this.theresaMay.push("memes/theresa-may-steam-running.jpg");
     this.theresaMay.push("memes/theresa-may-tiktok.jpg");
     this.crying.push("memes/crying.jpg");
+    this.crying.push("memes/tearymaguire.jpg");
     this.brain.push("memes/brain.jpg");
     this.brain.push("memes/communism-capitalisnt.jpg");
     this.spongebob.push("memes/spongebobChicken.jpg");
@@ -42,6 +45,19 @@ function hashMap(){
     this.gavin.push("memes/gavin2.jpg");
     this.gavin.push("memes/gavin3.jpg");
     this.gavin.push("memes/gavinscreaming.jpg");
+    this.drinking.push("memes/But-Thats-None-Of-My-Business.jpg");
+    this.drinking.push("memes/drinkingjuice.png");
+    this.drinking.push("memes/bonehurtinjuice.jpg");
+    this.dogs.push("memes/bonehurtinjuice.jpg");
+    this.dogs.push("memes/doge.jpeg");
+    this.animals.push("memes/bonehurtinjuicejpg");
+    this.animals.push("memes/doge.jpeg");
+    this.animals.push("memes/CrowOfJudgement.jpeg");
+    this.animals.push("memes/But-Thats-None-Of-My-Business.jpg");
+    this.animals.push("memes/datboi.jpg");
+    this.animals.push("memes/pepe.png");
+    this.animals.push("memes/normies.jpg");
+
 }
 
 hashMap.prototype.getPath = function(key){
@@ -73,6 +89,12 @@ hashMap.prototype._hash = function(key){
         return this.frogs;
     }else if(key==="gavin"){
         return this.gavin;
+    }else if(key==="doge"||key==="dog"){
+        return this.dogs;
+    }else if(key==="animals"||key==="animal"){
+        return this.animals;
+    }else if(key==="drinking"){
+        return this.drinking;
     }else{
         return [];
     }

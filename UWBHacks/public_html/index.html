@@ -28,9 +28,19 @@ and open the template in the editor.
                 width:300px;
                 height:20px;
             }
-            button{
-                display:block;
-                margin:0 auto;
+            #create{
+                margin-left:9%;
+            }
+            #delete{
+                margin-left:15%;
+
+            }
+            #clear{
+                margin-left:15%;
+            }
+            #buttons{
+                display:inline-b;
+                margin:auto;
             }
 /*            #text:hover{
                 font-style:italic;
@@ -43,9 +53,11 @@ and open the template in the editor.
         <div id="div">
             <p id = "text">TODO write content</p>
             <input type="text" id="textBox">
-            <button onclick="func()">MEME IT UP</button>
-            <button onclick="remove()">REMOVE</button>
-            <button onclick="clearMemes()">CLEAR</button>
+            <div id="buttons">
+                <button id="create" onclick="func()">MEME IT UP</button>
+                <button id="delete" onclick="remove()">REMOVE</button>
+                <button id="clear" onclick="clearMemes()">CLEAR</button>
+            </div>
         </div>
     </body>
 </html>
