@@ -20,6 +20,7 @@ function hashMap(){
 	this.surreal = [];
 	this.gameofthrones = [];
 	this.carsalesman = [];
+	this.think = [];
     this.spiderman.push("memes/tearymaguire.jpg");
     this.brain.push("memes/waterExpandingBrain.jpg");
     this.brain.push("memes/whomst.jpg");
@@ -97,6 +98,7 @@ function hashMap(){
 	this.carsalesman.push("memes/car-salesman-slaps-bear.jpg");
 	this.carsalesman.push("memes/car-salesman-lays-chips.jpg");
 	this.carsalesman.push("memes/car-salesman-trojan-horse.jpg");
+	this.think.push("memes/thonk.png");
 }
 
 hashMap.prototype.getPath = function(key){
@@ -150,6 +152,8 @@ hashMap.prototype._hash = function(key){
 		return this.gameofthrones;
 	}else if(key==="car"||key==="salesman"||key==="car salesman"||key==="slap"){
 		return this.carsalesman;
+	}else if(key==="think"||key==="thonk"){
+		return this.think;
 	}else{
         return [];
     }
