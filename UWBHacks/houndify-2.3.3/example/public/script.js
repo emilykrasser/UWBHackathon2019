@@ -7,7 +7,7 @@
        // for(var i=0;i<arr.length;i++){
         //    hashMap.createImage(arr[i]);
         //}
-        document.getElementById("text").innerHTML = "# OF MEMES: "+(document.getElementById("body").childElementCount-1);
+        //document.getElementById("text").innerHTML = "# OF MEMES: "+(document.getElementById("body").childElementCount-1);
     }
     
     function remove(){
