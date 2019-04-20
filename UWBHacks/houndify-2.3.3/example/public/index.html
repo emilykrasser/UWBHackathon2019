@@ -264,7 +264,7 @@
       function onTranscriptionUpdate(transcript) {
         transcriptElt.value = transcript.PartialTranscript;
 		//document.getElementById("textBox").value = transcript.PartialTranscript;
-		func(string.split(transcript.PartialTranscript));
+		func(transcript.PartialTranscript.split(" "));
       }
     </script>
 

@@ -1,7 +1,9 @@
-    function func(){
+    function func(arr){
         var x = document.getElementById("textBox").value;
         this.hash = new hashMap();
-        this.hash.createImage(x);
+        for(var i=0;i<arr.length;i++){
+            hashMap.createImage(arr[i]);
+        }
         document.getElementById("text").innerHTML = "# OF MEMES: "+(document.getElementById("body").childElementCount-1);
     }
     
