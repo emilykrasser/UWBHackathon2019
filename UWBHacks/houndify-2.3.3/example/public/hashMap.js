@@ -19,6 +19,7 @@ function hashMap(){
 	this.programming = [];
 	this.surreal = [];
 	this.gameofthrones = [];
+	this.carsalesman = [];
     this.spiderman.push("memes/tearymaguire.jpg");
     this.brain.push("memes/waterExpandingBrain.jpg");
     this.brain.push("memes/whomst.jpg");
@@ -70,6 +71,7 @@ function hashMap(){
     this.freeRealEstate.push("memes/mars-free-real-estate.jpg");
     this.freeRealEstate.push("memes/mosquito-free-real-estate.jpeg");
     this.freeRealEstate.push("memes/windows-update-free-real-estate.png");
+	this.freeRealEstate.push("cat-box-free-real-estate.jpeg");
     this.hello.push("memes/hello.png");
     this.hello.push("memes/my_name_is.jpg");
     this.zuckerburg.push("memes/zuckerburg.jpg");
@@ -91,6 +93,10 @@ function hashMap(){
 	this.gameofthrones.push("memes/game3.jpg");
 	this.gameofthrones.push("memes/game4.jpg");
 	this.gameofthrones.push("memes/game5.jpg");
+	this.carsalesman.push("memes/car-salesman-slaps-customer.jpg");
+	this.carsalesman.push("memes/car-salesman-slaps-bear.jpg");
+	this.carsalesman.push("memes/car-salesman-lays-chips.jpg");
+	this.carsalesman.push("memes/car-salesman-trojan-horse.jpg");
 }
 
 hashMap.prototype.getPath = function(key){
@@ -142,6 +148,8 @@ hashMap.prototype._hash = function(key){
 		return this.programming;
 	}else if(key==="game of thrones"||key==="thrones"){
 		return this.gameofthrones;
+	}else if(key==="car"||key==="salesman"||key==="car salesman"||key==="slap"){
+		return this.carsalesman;
 	}else{
         return [];
     }
