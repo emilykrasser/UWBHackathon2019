@@ -12,6 +12,7 @@ function hashMap(){
     this.frogs = [];
     this.animals=[];
     this.dogs = [];
+	this.freeRealEstate[];
     this.spiderman.push("memes/tearymaguire.jpg");
     this.brain.push("memes/waterExpandingBrain.jpg");
     this.brain.push("memes/whomst.jpg");
@@ -57,7 +58,10 @@ function hashMap(){
     this.animals.push("memes/datboi.jpg");
     this.animals.push("memes/pepe.png");
     this.animals.push("memes/normies.jpg");
-
+	this.freeRealEstate.push("memes/free-real-estate.jpg");
+	this.freeRealEstate.push("sibling-steal-chair-free-real-estate.png");
+	this.freeRealEstate.push("mars-free-real-estate.jpg");
+	this.freeRealEstate.push("mosquito-free-real-estate.jpeg");
 }
 
 hashMap.prototype.getPath = function(key){
@@ -95,7 +99,9 @@ hashMap.prototype._hash = function(key){
         return this.animals;
     }else if(key==="drinking"){
         return this.drinking;
-    }else{
+    }else if(key==="free real estate"||key==="real estate"||key==="free"||key==="estate"){
+		return this.freeRealEstate;
+	}else{
         return [];
     }
 };
