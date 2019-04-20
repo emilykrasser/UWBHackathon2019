@@ -59,9 +59,9 @@ function hashMap(){
     this.animals.push("memes/pepe.png");
     this.animals.push("memes/normies.jpg");
     this.freeRealEstate.push("memes/free-real-estate.jpg");
-    this.freeRealEstate.push("sibling-steal-chair-free-real-estate.png");
-    this.freeRealEstate.push("mars-free-real-estate.jpg");
-    this.freeRealEstate.push("mosquito-free-real-estate.jpeg");
+    this.freeRealEstate.push("memes/sibling-steal-chair-free-real-estate.png");
+    this.freeRealEstate.push("memes/mars-free-real-estate.jpg");
+    this.freeRealEstate.push("memes/mosquito-free-real-estate.jpeg");
 }
 
 hashMap.prototype.getPath = function(key){
@@ -100,7 +100,7 @@ hashMap.prototype._hash = function(key){
     }else if(key==="drinking"){
         return this.drinking;
     }else if(key==="free real estate"||key==="real estate"||key==="free"||key==="estate"){
-	return this.freeRealEstate;
+	    return this.freeRealEstate;
     }else{
         return [];
     }
