@@ -32,33 +32,18 @@
 		width: 35%;
 	}
 
-	input {
-		display: flex;
-		margin-left: auto;
-		margin-right: auto;
-		margin-top: 7%;
-		width: 7%;
+	#microphone {
+		height: 14%;
+		max-width: 7%;
 	}
+	
 	</style>
   </head>
 
   <body id="body">
+  
 	<div id="div">
-            <p id = "text">TODO write content</p>
-            <input type="text" id="textBox">
-            <div id="buttons">
-                <button id="create" onclick="func()">MEME IT UP</button>
-                <button id="delete" onclick="remove()">REMOVE</button>
-                <button id="clear" onclick="clearMemes()">CLEAR</button>
-            </div>
-    </div>
-	
-	
-	<script>
-	function microphoneClick() {
-		document.getElementById("microphone").src = "MicrophoneRecording.png";
-	}
-	</script>
+	</div>
 
 	<img id="DYKWI" src="DoYouKnowWhatI.png" alt="Do You Know What I">
 	<img id="MEMES" src="memes.gif" alt="MEMES">
@@ -68,9 +53,7 @@
       <form id="form" class="ui form" action="javascript:void(0);">
 
         <div class="ui action big labeled fluid input field">
-          <div class="ui icon basic label button" onclick="onMicrophoneClick()">
-            <i id="voiceIcon" class="unmute big icon"></i>
-          </div>
+		  <input id="microphone" type="image" src="microphone.png" onclick="onMicrophoneClick()" />
           <input id="query" type="text" placeholder="Click on a microphone icon or type in your query" />
         </div>
 
@@ -91,7 +74,7 @@
       var infoElt = document.getElementById("infoJSON");
       var statusElt = document.getElementById("status");
       var transcriptElt = document.getElementById("query");
-      var clientID = "tEwGEUFbqyO3wDcSi0bq5g==";
+      var clientID = "SuzRtJ7H7TAkj-8SuG8wsA==";
       var conversationState = null;
       var voiceRequest = null;
       var recorder = new Houndify.AudioRecorder();
@@ -105,6 +88,7 @@
       });
       recorder.on('end', function() {
         voiceRequest.end();
+		document.getElementById("microphone").src = "Microphone.png";
         statusElt.innerText = "Stopped recording. Waiting for response...";
         document.getElementById("voiceIcon").className = "unmute big icon";
         document.getElementById("textSearchButton").disabled = false;
@@ -173,7 +157,9 @@
       }
 	  
       function onMicrophoneClick() {
+		document.getElementById("microphone").src = "MicrophoneRecording.png";
         if (recorder && recorder.isRecording()) {
+		  document.getElementById("microphone").src = "Microphone.png";
           recorder.stop();
           return;
         }
@@ -189,10 +175,14 @@
       //See https://houndify.com/reference/HoundPartialTranscript
       function onTranscriptionUpdate(transcript) {
         transcriptElt.value = transcript.PartialTranscript;
-		document.getElementById("textBox").value = transcript.PartialTranscript;
+		//document.getElementById("textBox").value = transcript.PartialTranscript;
 		var a = transcript.PartialTranscript.split(" ");
 		var i;
 		for (i = 0; i < a.length; i++) {
+			if (a[i] == "clear") {
+				clearMemes();
+				continue;
+			}
 			func(a[i]);
 		}
 		//func(transcript.PartialTranscript.split(" "));
