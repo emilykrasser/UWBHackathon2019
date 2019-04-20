@@ -1,9 +1,12 @@
     function func(arr){
-        var x = document.getElementById("textBox").value;
+		console.log("In func!!!!!");
+        //var x = document.getElementById("textBox").value;
         this.hash = new hashMap();
-        for(var i=0;i<arr.length;i++){
-            hashMap.createImage(arr[i]);
-        }
+		console.log("Creating Image: " + arr);
+		this.hash.createImage(arr);
+       // for(var i=0;i<arr.length;i++){
+        //    hashMap.createImage(arr[i]);
+        //}
         document.getElementById("text").innerHTML = "# OF MEMES: "+(document.getElementById("body").childElementCount-1);
     }
     

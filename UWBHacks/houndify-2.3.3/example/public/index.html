@@ -9,7 +9,8 @@
 
   <body id="body">
 	<div id="div">
-            <p id = "text">TODO write content</p>
+            <p id = "text">TODOssss write content</p>
+			<p id = "test">testsetests</p>
             <input type="text" id="textBox">
             <div id="buttons">
                 <button id="create" onclick="func()">MEME IT UP</button>
@@ -184,6 +185,16 @@
           onTranscriptionUpdate: onTranscriptionUpdate,
           onResponse: function(response, info) {
             recorder.stop();
+			
+			//transcriptElt.value = transcript.PartialTranscript;
+			//document.getElementById("textBox").value = transcript.PartialTranscript;
+			//func(transcript.PartialTranscript.split(" "));
+			//var arr = transcript.PartialTranscript.split(" ");
+			
+			//for (var i = 0; i < arr; i++) {
+				//document.getElementById("test").value = arr[i];
+			//}
+			
             onResponse(response, info);
           },
           onError: function(err, info) {
@@ -263,8 +274,13 @@
       //See https://houndify.com/reference/HoundPartialTranscript
       function onTranscriptionUpdate(transcript) {
         transcriptElt.value = transcript.PartialTranscript;
-		//document.getElementById("textBox").value = transcript.PartialTranscript;
-		func(transcript.PartialTranscript.split(" "));
+		document.getElementById("textBox").value = transcript.PartialTranscript;
+		var a = transcript.PartialTranscript.split(" ");
+		var i;
+		for (i = 0; i < a.length; i++) {
+			func(a[i]);
+		}
+		//func(transcript.PartialTranscript.split(" "));
       }
     </script>
 

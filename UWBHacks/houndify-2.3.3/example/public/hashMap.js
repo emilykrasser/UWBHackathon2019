@@ -12,7 +12,7 @@ function hashMap(){
     this.frogs = [];
     this.animals=[];
     this.dogs = [];
-    this.freeRealEstate[];
+    this.freeRealEstate = [];
     this.spiderman.push("memes/tearymaguire.jpg");
     this.brain.push("memes/waterExpandingBrain.jpg");
     this.brain.push("memes/whomst.jpg");
