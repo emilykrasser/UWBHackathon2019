@@ -52,7 +52,7 @@ function hashMap(){
     this.drinking.push("memes/But-Thats-None-Of-My-Business.jpg");
     this.drinking.push("memes/drinkingjuice.png");
     this.drinking.push("memes/bonehurtinjuice.jpg");
-	this.drinking.push("memes/drinkwater.png");
+    this.drinking.push("memes/drinkwater.png");
     this.dogs.push("memes/bonehurtinjuice.jpg");
     this.dogs.push("memes/doge.jpeg");
     this.animals.push("memes/bonehurtinjuicejpg");
@@ -66,13 +66,13 @@ function hashMap(){
     this.freeRealEstate.push("memes/sibling-steal-chair-free-real-estate.png");
     this.freeRealEstate.push("memes/mars-free-real-estate.jpg");
     this.freeRealEstate.push("memes/mosquito-free-real-estate.jpeg");
-	this.hello.push("memes/hello.png");
-	this.hello.push("memes/my_name_is.jpg");
-	this.zuckerburg.push("memes/zuckerburg.jpg");
-	this.zuckerburg.push("memes/zuckerburg2.jpg");
-	this.zuckerburg.push("memes/zuckerburg3.jpg");
-	this.badluckbrian.push("memes/badluckbrian1.png");
-	this.badluckbrian.push("memes/badluckbrian2.png");
+    this.hello.push("memes/hello.png");
+    this.hello.push("memes/my_name_is.jpg");
+    this.zuckerburg.push("memes/zuckerburg.jpg");
+    this.zuckerburg.push("memes/zuckerburg2.jpg");
+    this.zuckerburg.push("memes/zuckerburg3.jpg");
+    this.badluckbrian.push("memes/badluckbrian1.png");
+    this.badluckbrian.push("memes/badluckbrian2.png");
 }
 
 hashMap.prototype.getPath = function(key){
@@ -113,11 +113,11 @@ hashMap.prototype._hash = function(key){
     }else if(key==="free real estate"||key==="real estate"||key==="free"||key==="estate"){
 	    return this.freeRealEstate;
     }else if(key==="hello"){
-		return this.hello;
-	}else if(key==="zuckerburg"||key==="zucc"||key==="zuck"){
-		return this.zuckerburg;
-	}else if(key==="bad luck brian"||key==="bad luck"||key==="brian"){
-		return this.badluckbrian;
+	return this.hello;
+    }else if(key==="zuckerburg"||key==="zucc"||key==="zuck"){
+	return this.zuckerburg;
+    }else if(key==="bad luck brian"||key==="bad luck"||key==="brian"){
+	return this.badluckbrian;
     }else{
         return [];
     }
