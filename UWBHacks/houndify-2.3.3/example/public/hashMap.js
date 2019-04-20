@@ -54,7 +54,7 @@ function hashMap(){
     this.drinking.push("memes/But-Thats-None-Of-My-Business.jpg");
     this.drinking.push("memes/drinkingjuice.png");
     this.drinking.push("memes/bonehurtinjuice.jpg");
-	this.drinking.push("memes/drinkwater.png");
+    this.drinking.push("memes/drinkwater.png");
     this.dogs.push("memes/bonehurtinjuice.jpg");
     this.dogs.push("memes/doge.jpeg");
     this.animals.push("memes/bonehurtinjuicejpg");
