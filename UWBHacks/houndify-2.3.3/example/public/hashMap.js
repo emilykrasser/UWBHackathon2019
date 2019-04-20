@@ -13,9 +13,11 @@ function hashMap(){
     this.animals=[];
     this.dogs = [];
     this.freeRealEstate = [];
-	this.hello = [];
-	this.zuckerburg = [];
-	this.badluckbrian = [];
+    this.hello = [];
+    this.zuckerburg = [];
+    this.badluckbrian = [];
+    this.programming = [];
+    this.surreal = [];
     this.spiderman.push("memes/tearymaguire.jpg");
     this.brain.push("memes/waterExpandingBrain.jpg");
     this.brain.push("memes/whomst.jpg");
@@ -52,7 +54,7 @@ function hashMap(){
     this.drinking.push("memes/But-Thats-None-Of-My-Business.jpg");
     this.drinking.push("memes/drinkingjuice.png");
     this.drinking.push("memes/bonehurtinjuice.jpg");
-	this.drinking.push("memes/drinkwater.png");
+    this.drinking.push("memes/drinkwater.png");
     this.dogs.push("memes/bonehurtinjuice.jpg");
     this.dogs.push("memes/doge.jpeg");
     this.animals.push("memes/bonehurtinjuicejpg");
@@ -66,13 +68,22 @@ function hashMap(){
     this.freeRealEstate.push("memes/sibling-steal-chair-free-real-estate.png");
     this.freeRealEstate.push("memes/mars-free-real-estate.jpg");
     this.freeRealEstate.push("memes/mosquito-free-real-estate.jpeg");
-	this.hello.push("memes/hello.png");
-	this.hello.push("memes/my_name_is.jpg");
-	this.zuckerburg.push("memes/zuckerburg.jpg");
-	this.zuckerburg.push("memes/zuckerburg2.jpg");
-	this.zuckerburg.push("memes/zuckerburg3.jpg");
-	this.badluckbrian.push("memes/badluckbrian1.png");
-	this.badluckbrian.push("memes/badluckbrian2.png");
+    this.freeRealEstate.push("memes/windows-update-free-real-estate.png");
+    this.hello.push("memes/hello.png");
+    this.hello.push("memes/my_name_is.jpg");
+    this.zuckerburg.push("memes/zuckerburg.jpg");
+    this.zuckerburg.push("memes/zuckerburg2.jpg");
+    this.zuckerburg.push("memes/zuckerburg3.jpg");
+    this.badluckbrian.push("memes/badluckbrian1.png");
+    this.badluckbrian.push("memes/badluckbrian2.png");
+    this.programming.push("memes/actual-programming-vs-debating-30-minutes-on-how-to-name-a-variable-drake-meme.jpg");
+    this.programming.push("memes/computer-straight-up-not-having-a-good-time.jpg");
+    this.programming.push("memes/matlab-is-not-a-real-language.jpg");
+    this.programming.push("memes/surprised-pikachu-code-works.png");
+    this.programming.push("memes/windows-update-free-real-estate.jpg");
+    this.surreal.push("memes/orang.png");
+    this.surreal.push("memes/dispensethecubes.png");
+    this.surreal.push("memes/toothpasteSurprise.jpg");
 }
 
 hashMap.prototype.getPath = function(key){
@@ -111,13 +122,17 @@ hashMap.prototype._hash = function(key){
     }else if(key==="drinking"){
         return this.drinking;
     }else if(key==="free real estate"||key==="real estate"||key==="free"||key==="estate"){
-	    return this.freeRealEstate;
+        return this.freeRealEstate;
     }else if(key==="hello"){
-		return this.hello;
-	}else if(key==="zuckerburg"||key==="zucc"||key==="zuck"){
-		return this.zuckerburg;
-	}else if(key==="bad luck brian"||key==="bad luck"||key==="brian"){
-		return this.badluckbrian;
+	return this.hello;
+    }else if(key==="zuckerburg"||key==="zucc"||key==="zuck"){
+	return this.zuckerburg;
+    }else if(key==="bad luck brian"||key==="bad luck"||key==="brian"){
+	return this.badluckbrian;
+    }else if(key==="surreal"||key==="weird"||key==="strange"){
+	return this.surreal;
+    }else if(key==="programming"||key==="computer"||key==="coding"||key==="code"){
+	return this.programming;
     }else{
         return [];
     }
