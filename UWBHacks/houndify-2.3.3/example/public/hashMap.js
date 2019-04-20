@@ -18,6 +18,7 @@ function hashMap(){
 	this.badluckbrian = [];
 	this.programming = [];
 	this.surreal = [];
+	this.gameofthrones = [];
     this.spiderman.push("memes/tearymaguire.jpg");
     this.brain.push("memes/waterExpandingBrain.jpg");
     this.brain.push("memes/whomst.jpg");
@@ -84,6 +85,12 @@ function hashMap(){
 	this.surreal.push("memes/orang.png");
 	this.surreal.push("memes/dispensethecubes.png");
 	this.surreal.push("memes/toothpasteSurprise.jpg");
+	this.gameofthrones.push("memes/game.jpg");
+	this.gameofthrones.push("memes/game1.jpg");
+	this.gameofthrones.push("memes/game2.jpg");
+	this.gameofthrones.push("memes/game3.jpg");
+	this.gameofthrones.push("memes/game4.jpg");
+	this.gameofthrones.push("memes/game5.jpg");
 }
 
 hashMap.prototype.getPath = function(key){
@@ -133,6 +140,8 @@ hashMap.prototype._hash = function(key){
 		return this.surreal;
 	}else if(key==="programming"||key==="computer"||key==="coding"||key==="code"){
 		return this.programming;
+	}else if(key==="game of thrones"||key==="thrones"){
+		return this.gameofthrones;
 	}else{
         return [];
     }
